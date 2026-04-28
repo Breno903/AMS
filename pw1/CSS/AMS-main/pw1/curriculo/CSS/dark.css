@@ -1,0 +1,30 @@
+:root {
+    /*modo claro */
+    --cor-fundo:#ececec;
+    --cor-header: #004d00;
+    --cor-footer: #009688;
+    --cor-texto: #222;
+    --cor-branca: #fff;
+    --cor-borda: #ececec;
+    --cor-sonbra: #ccc;
+}
+
+/* modo escuro */
+.dark {
+--cor-fundo:#121212;
+    --cor-header: #004d00;
+    --cor-footer: #1f1f1f;
+    --cor-texto: #2c2c2c;
+    --cor-branca: #f1f1f1;
+    --cor-borda: #1e1e1e;
+    --cor-sonbra: #000;
+}
+
+* {
+    transition: all 0.5 ease;
+}
+
+body {
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+}
