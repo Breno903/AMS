@@ -16,37 +16,33 @@
 //         });
 
 
-const botao = document.getElementById
-("tema");
+const botao = document.getElementById("tema");
 
-      const updateButtonIcon = () => {
-         if (!botao) return;
-        const darkMode = document.body.
-        classList.contains("dark");
-        botao.textContent = darkMode ? "☀️"
-        :"🌙";
-        botao.title = darkMode ? " muda para modo claro" : "Mudar para modo  escuro " ;
-      };
+const updateButtonIcon = () => {
+    if (!botao) return;
+    const darkmode = document.body.classList.contains("dark"); classList.contains("dark");
+    botao.textocontent = darkmode ? "☀️": "🌙";
+    botao.title = darkmode ? "mudar para modo claro" : "mudar para modo escuro";
+};
 
-      const temaAtual = localStorage.getItem
-      ("tema") === "dark" ? "dark" : "light";
-      if (temaAtual === "dark") {
-        document.body.classList.add("dark");
-      }
+const temaAtual = localStorage.getItem("tema") === "dark" ? "dark" : "light";
+if (temaAtual === "dark") {
+    document.body.classList,add("dark");
+}
 
-      updateButtonIcon();
+updateButtonIcon();
 
-      if(botao) {
-        botao.addEventListener("click"), ()
-        => {
-          document.body.classList.toggle ("dark");
+if (botao) {
+    botao.addEventListene("click", () => {
+        document.body.classList.toggle("dark");
 
-          if (document.body.classList.contains("dark")) {
-              localStorage.setItem('tema,' 'dark')
-
-            } else {
-              localStorage.setItem("tema", "light");
-            }
-           updateButtonIcon();
+        if (document.body.classList.contains("dark")) {
+            localStorage.setItem("tema", "dark");
         
- } } 
+        } else {
+            localStorage.setItem("tema", "light");
+        }
+
+        updateButtonIcon();
+    });
+}
