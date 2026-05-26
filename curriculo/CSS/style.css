@@ -1,59 +1,69 @@
-@charset "UFT-8";
+@charset "UTF-8";
 
 :root{
     /* Cores */
-    --cor-fundo: #ececee;
-    --cor-herader: #004d40;
-    --cor-footer: #009688;
-    --cor-texto: #222;
-    --cor-sonbra:#cecece;
-    --cor-branca: #fff;
+    --cor-fundo:#ececec;
+    --cor-herader:#004d40;
+    --cor-footer:   #009688;
+    --cor-texto:   #222;
+    --cor-borda:   #cecece;
+    --cor-sombra:  #ccc;
+    --cor-branca:  #fff;
+    --bg-image: url("..imagens/clara.avif");
+    
 
-    /*fonte */
-    --font-padrao: Arial,Tahoma, Verdana;
+    /* Fontes */
+    --fonte-padrao: Arial, Tahoma, Verdana;
 
-    /* tamanho */
-    --Fonte-base: 18px;
-    --Line-base: 28px;
+    /* tamanhos */
+    --font-base: 18px;
+    --line-base: 28px;
     --radius: 5px;
 
     /* Espaçamento */
     --espaco-padrao: 10px;
 }
-/* Configuração global(reset da pagina) */
+/* configura global(reset da pagina) */
 *{
-    margin: 0;
+    margin:  0;
     padding: 0;
     font-family: var(--fonte-padrao);
-    font-size:var(--font-base);
-    line-height:var(--line-base);
+    font-size: var(font-base);
+    line-height: var(--line-base);
 
 }
 
 html, body{
     height: 100%;
-    background: var(--cor-fundo);
+    /* background: var (--cor-fundo); */
+    background:
+    linear-gradient(
+        rgba(255,255, 255 var(--overlay-opacity)),
+        rgba(255,255, 255 var(--overlay-opacity))
+    )
+    var(--bg-image) no-repeat center center fixed;
+    background-size: cover;
 }
 
 main{
-    width: 100%
-    height: 100%
+    width: 100%;
+    height: 100%;
 }
 
 section{
     display: block;
-    width : 640px;
+    width: 640px;
     margin: auto;
-    padding: var(--espaco-padrao);
+    padding: var(--espaço-padrao);
 }
 
-header~{
+header{
     width: 100%;
     height: 50px;
-    background: var (--cor-header);
+    background: var(--cor-herader);
 }
 
-hi{
+h1{
     text-align: center;
     line-height: 50px;
     font-size: 25px;
@@ -61,7 +71,69 @@ hi{
 }
 
 nav a{
-    text-decoration: none;
+    text-decoration: nome;
     color: var(--cor-texto);
     font-weight: bold;
+}
+
+nav{
+    margin-top: var(--espaco-padrao);
+}
+
+nav a:hover{
+    color: var(--cor-footer);
+}
+
+nav ul{
+    list-style: none;
+}
+
+ul li, ol li{
+    margin-left: 40px;
+    line-height: 30px;
+}
+
+footer p{
+    line-height: 25px;
+}
+
+footer{
+    width: 100%;
+    height: 25px;
+    background: var(--cor-branca);
+    color: var(--cor-branca);
+    position: absolute;
+    bottom: 0;
+    display: block;
+    clear: both;
+}
+
+h2{
+    line-height: 40px;
+}
+
+p, blockquote{
+    text-align: center;
+    line-height: 26px;
+}
+
+hr{
+    margin: var(--espaco-padrao);
+}
+
+img{
+    width: 85px;
+    position: relative;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+figure{
+    width: 105px;
+    height: 105px;
+    background: var(--cor-branca);
+    border-radius: 75px;
+    margin: var(--espaço-padrao) auto;
+    border: 1px solid var(--cor-borda);
+    box-shadow: 0px 1px 2px var(--cor-sombra);
 }
