@@ -1,0 +1,204 @@
+/* ================================
+   TABELA PERIÓDICA
+   ================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px;
+    background-color: #f4f6f8;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Tabela principal */
+.tabela-periodica {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 4px;
+}
+
+/* Células */
+.tabela-periodica td {
+    width: 70px;
+    height: 90px;
+    min-width: 55px;
+
+    text-align: center;
+    vertical-align: middle;
+
+    border: 2px solid #333;
+    border-radius: 8px;
+
+    padding: 5px;
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+/* Efeito ao passar o mouse */
+.tabela-periodica td:hover {
+    transform: scale(1.08);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Número atômico */
+.numero {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 3px;
+}
+
+/* Símbolo químico */
+.simbolo {
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+/* Nome do elemento */
+.nome {
+    font-size: 10px;
+    margin-top: 5px;
+    white-space: nowrap;
+}
+
+
+/* ================================
+   CORES DOS ELEMENTOS
+   ================================ */
+
+/* Não metais */
+.nao-metal {
+    background-color: #a8d8ff;
+    border-color: #2980b9 !important;
+}
+
+/* Metais alcalinos */
+.alcalino {
+    background-color: #ffb3b3;
+    border-color: #e74c3c !important;
+}
+
+/* Metais alcalino-terrosos */
+.alcalino-terroso {
+    background-color: #ffd6a5;
+    border-color: #e67e22 !important;
+}
+
+/* Metais de transição */
+.metal-transicao {
+    background-color: #fff1a8;
+    border-color: #d4ac0d !important;
+}
+
+/* Metais pós-transição */
+.metal-pos-transicao {
+    background-color: #c9e6b8;
+    border-color: #6a994e !important;
+}
+
+/* Semimetais */
+.semimetal {
+    background-color: #b8e0d2;
+    border-color: #2a9d8f !important;
+}
+
+/* Halogênios */
+.halogenio {
+    background-color: #d8b4fe;
+    border-color: #8e44ad !important;
+}
+
+/* Gases nobres */
+.gas-nobre {
+    background-color: #bde0fe;
+    border-color: #3498db !important;
+}
+
+/* Lantanídeos */
+.lantanideo {
+    background-color: #ffc8dd;
+    border-color: #d63384 !important;
+}
+
+/* Actinídeos */
+.actinideo {
+    background-color: #ffafcc;
+    border-color: #c9184a !important;
+}
+
+
+/* ================================
+   ESPAÇOS VAZIOS
+   ================================ */
+
+.tabela-periodica td:empty {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+}
+
+.tabela-periodica td:empty:hover {
+    transform: none;
+    cursor: default;
+}
+
+
+/* ================================
+   RESPONSIVIDADE
+   ================================ */
+
+@media (max-width: 1200px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .tabela-periodica {
+        border-spacing: 2px;
+    }
+
+    .tabela-periodica td {
+        height: 70px;
+        min-width: 45px;
+        padding: 3px;
+    }
+
+    .simbolo {
+        font-size: 20px;
+    }
+
+    .numero {
+        font-size: 9px;
+    }
+
+    .nome {
+        font-size: 7px;
+    }
+}
+
+
+@media (max-width: 800px) {
+
+    body {
+        padding: 10px;
+        overflow-x: auto;
+    }
+
+    .tabela-periodica {
+        min-width: 1100px;
+    }
+
+    .tabela-periodica td {
+        width: 55px;
+        height: 75px;
+    }
+}
