@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aliceblue;
+    color: black;
+}
+
+.cabecalho {
+    background-color: black;
+    display: flex;
+    color: azure;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: crimson;
+}
+
+.menu {
+    display: flex;
+    gap: 25px
+}
+
+.menu a {
+    color: mintcream;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: red;
+
+}
+
+.banner {
+    min-height: 350px;
+    background: linear-gradient(
+        135deg,
+        #111827
+        #374151
+ );
+ colo
+}
